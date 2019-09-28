@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="css/style.css">
+   <!-- favicon -->
+   <link rel="shortcut icon" href="/icons/icon-192.png" type="image/png" sizes="32x32 64x64 128x128 192x192">
+   <!-- iOS icon -->
+   <link rel="apple-touch-icon-precomposed" href="/icons/icon-512.png" type="image/png" sizes="192x192 512x512">
+   <title>The Great RGB Game</title>
+</head>
+<body>
+   <div class="container">
+      <div class="row">
+         <div class="col-12">
+            <h1 class="display-4 text-center text-white">The Great</h1>
+            <h1 class="text-center text-white" id="colorDisplay">RGB(255, 255, 255)</h1>
+            <p class="lead text-center text-white">Color Game</p>
+            <hr class="my-4 bg-light"/>
+            <div class="w-100 badge-pill mb-3" id="statusBar">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="barCol col-4 d-flex justify-content-center align-items-center">
+                        <span id="score" class="badge-pill px-2 px-md-5 text-white">
+                           Score: <span id="scoreCount" class="d-block d-md-inline text-center"></span>
+                        </span>
+                     </div>
+                     <div class="barCol col-4 d-flex justify-content-center align-items-center">
+                        <span id="gameButton" class="badge-pill bg-success px-5 text-white">
+                           Play
+                        </span>
+                        <span id="triesWrap">
+                           <span id="tries" class="w-100 d-flex justify-content-center">
+                              <span class="try bg-success rounded-circle mx-1"></span>
+                              <span class="try bg-success rounded-circle mx-1"></span>
+                              <span class="try bg-success rounded-circle mx-1"></span>
+                           </span>
+                        </span>
+                     </div>
+                     <div class="barCol col-4 d-flex justify-content-center align-items-center">
+                        <span id="lives" class="badge-pill bg-danger px-2 px-md-5 text-white">
+                           Lives: <span id="livesCount" class="d-block d-md-inline text-center"></span>
+                        </span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div id="squaresContainer" class="container-fluid">
+               <div class="row">
+                  <div class="col-4">
+                     <div class="squares mx-auto" onclick="PickMe(0)"></div>
+                  </div>
+                  <div class="col-4">
+                     <div class="squares mx-auto" onclick="PickMe(1)"></div>
+                  </div>
+                  <div class="col-4">
+                     <div class="squares mx-auto" onclick="PickMe(2)"></div>
+                  </div>
+                  <div class="col-4">
+                     <div class="squares mx-auto" onclick="PickMe(3)"></div>
+                  </div>
+                  <div class="col-4">
+                     <div class="squares mx-auto" onclick="PickMe(4)"></div>
+                  </div>
+                  <div class="col-4">
+                     <div class="squares mx-auto" onclick="PickMe(5)"></div>
+                  </div>
+               </div>
+            </div>
+            <div id="endScreen" class="container-fluid">
+               <div class="row">
+                  <div class="col-12">
+                     <h1 class="display-4 mx-auto text-light text-center">Final Score: <span id="finalScore"></span></h1>
+                     <button class="btn btn-light badge-pill mx-auto d-block" type="button" onClick="document.location.reload(true)">Play again</button>
+                  </div>
+               </div>
+            </div>
+      </div>
+      </div>
+   </div>
+   <script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script src="./js/jquery-ui.min.js"></script>
+   <script src="main.js"></script>
+</body>
+</html>
